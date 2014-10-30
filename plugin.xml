@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        id="com.cjasoni.cordova.device-email-account"
+        version="1.0.0">
+    
+    <name>DeviceEmailAccount</name>
+    <description>This plugin will the email accounts available through  Account Manager classes.</description>
+    <author>Jason Mejares</author>
+    <keywords>android, telephony manager, account details</keywords>
+    <license>MIT</license>
+    
+    <engines>
+        <engine name="cordova" version=">=3.0.0" />
+    </engines>
+    
+    <js-module src="www/device-email-account.js" name="DeviceEmailAccount">
+        <clobbers target="cordova.plugins.deviceEmailAccount" />
+    </js-module>
+    
+    <asset src="www/device-email-account.js" target="device-email-account.js" />
+   
+    <platform name="android">
+        
+        <source-file src="src/com/cjasoni/cordova/plugins/DeviceEmailAccount.java" target-dir="src/com/cjasoni/cordova/plugins" />		
+        
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="DeviceEmailAccount">
+                <param name="android-package" value="com.cjasoni.cordova.plugins.DeviceEmailAccount" />
+            </feature>
+        </config-file>
+
+        <config-file target="AndroidManifest.xml" parent="/manifest">
+            <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+        </config-file>
+     </platform>
+
+</plugin>
+
