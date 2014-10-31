@@ -1,4 +1,4 @@
-package com.cjasoni.cordova.plugins.device-email-account;
+package com.cjasoni.cordova.plugins;
 
 import org.apache.cordova.CallbackContext;
 import org.apache.cordova.CordovaPlugin;
@@ -24,8 +24,8 @@ public class DeviceEmailAccount extends CordovaPlugin {
                     str += ",";
                 }
 
-                str += "account" + i + "Name: " + checkValue(accounts[i].name) + ","
-                        + "account" + i + "Type: " + checkValue(accounts[i].type);
+                str += "account" + i + "Name: " + accounts[i].nam) + ","
+                        + "account" + i + "Type: " + accounts[i].type;
             }
         }
 
