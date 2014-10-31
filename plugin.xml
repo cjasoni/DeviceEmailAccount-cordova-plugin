@@ -19,7 +19,7 @@
         <clobbers target="cordova.plugins.deviceEmailAccount" />
     </js-module>
     
-    <!-- <asset src="www/device-email-account.js" target="device-email-account.js" /> -->
+     <asset src="www/device-email-account.js" target="device-email-account.js" />
    
     <platform name="android">
         
